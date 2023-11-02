@@ -47,7 +47,7 @@ The Injury Tracking System is a web application designed for organizations, such
 
 - **Visually Appealing**: The user interface is visually appealing, enhancing the overall user experience and making the application more inviting and intuitive.
 
-### Tech Stack
+### Technologies Used
 
 #### Front-end:
 - **Framework**: Next.js
@@ -60,9 +60,6 @@ The Injury Tracking System is a web application designed for organizations, such
 #### Authentication:
 - **Authentication Provider**: Auth0
 - **Login Options**: Google login, email login
-
-#### Analytics:
-- **Data Visualization**: Chart.js
 
 #### Progressive Web App (PWA):
 - **Service Workers and PWA Features**: Implemented for enhanced performance and offline capabilities.
