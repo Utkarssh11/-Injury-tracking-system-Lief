@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+
+  .inner-container {
+    width: 100%;
+    overflow-y: auto;
+    height: 100vh;
+  }
+}
