@@ -1,124 +1,88 @@
 # Injury Tracking System
 
-## Overview
+The Injury Tracking System is a web application designed for organizations, such as the police, to efficiently record and manage injury reports submitted by individuals. This application offers a range of features to streamline injury reporting, management, and user authentication, while providing a clean and user-friendly interface for an enhanced user experience.
 
-The Injury Tracking System is a web application designed for organizations, such as the police, to record and track injuries reported by individuals. It offers features for creating, viewing, updating, and deleting injury reports, along with a unique functionality of pinpointing injuries on a body map. The application aims to provide a user-friendly interface for efficient injury management.
+## Features
 
-## Features Implemented
+### Report Management
 
-### Report Management:
+- **Create, View, Update, and Delete Reports**: Users can easily create, view, update, and delete injury reports, allowing for efficient management of reported injuries.
 
-- Users can create, view, update, and delete injury reports.
-- Injury reports include the reporter's name, date & time of injury.
-- Body map functionality allows users to select different areas of injury with automatic labeling.
-- Users can provide details of injuries for each selected area.
+- **Injury Report Information**: Each injury report includes the following details:
+  - Name of the reporter
+  - Date and time of the injury
 
-### List of Reports:
+### Body Map Annotation
 
-- A table displays injury reports with information such as name, date & time of injury, and date of the report.
-- Users can sort reports by various fields.
-- Searching through the reports is supported.
-- Filtering by start and end dates for report is available.
+- **Body Map Image Annotation**: Users can pinpoint and label different areas of injury on a body map image. For instance, if a user encircles the left hand and left foot, the system automatically labels these areas as "1" and "2" respectively.
 
-### User Authentication:
+- **Injury Details**: For each encircled area, users can provide detailed information about the injuries. This information is organized in labeled boxes, corresponding to the numbered areas on the body map.
 
-- Users can register with a username and password.
-- Authentication options include Google login and email login using Auth0.
-- Users can log in, log out of the application.
+### List of Reports
 
-### UI/UX:
+- **Comprehensive Report List**: Users can access a list or table displaying all reported injuries. This list includes essential information for each report:
+  - Name of the reporter
+  - Date and time of the injury
+  - Date of the report
 
-- The application has a clean and responsive interface.
-- Ant design libraries are used for a visually appealing design.
-- The design is optimized for both desktop and mobile devices.
+- **Sorting**: Users can sort the list by any of the fields mentioned above to quickly find and categorize reports.
 
-## Bonus Features Attempted
+- **Search by Name**: The search functionality allows users to locate specific reports by the name of the reporter.
 
-### Progressive Web App (PWA):
+- **Filtering**: Users can filter reports based on the start and end dates of the injury and the date and time of the report.
 
-- The application is built as a fully responsive PWA.
-- Offline functionality is enabled for a seamless user experience.
+### User Authentication
 
-### Automatic Location Detection:
+- **User Registration**: Users can register for an account within the application using a username and password. Additionally, options for Google login and email login are available to provide flexibility in authentication methods.
 
-- Injury areas on the body map are automatically labeled based on detection.
+- **Authentication via Auth0**: User authentication is implemented using Auth0, a secure identity management platform that ensures user data privacy.
 
-### Analytics Dashboard:
+- **Account Management**: Registered users can log in and out of their accounts and access a history of their tasks, creating a seamless and personalized experience.
 
-- An analytics dashboard with visualizations of relevant metrics has been implemented.
+### UI/UX
 
-## Tech Stack
+- **Clean and User-Friendly Interface**: The application features a clean and user-friendly interface designed using Next.js with the Ant Design library. The interface prioritizes usability and ease of navigation.
 
-### Front-end:
+- **Responsive Design**: The application is optimized for both desktop and mobile devices, providing a consistent and enjoyable user experience across various platforms.
 
-- Next.js with Ant design library.
+- **Visually Appealing**: The user interface is visually appealing, enhancing the overall user experience and making the application more inviting and intuitive.
 
-### Back-end:
+### Tech Stack
 
-- Prisma as the ORM.
-- PostgreSQL database.
+#### Front-end:
+- **Framework**: Next.js
+- **UI Library**: Ant Design
 
-### Authentication:
+#### Back-end:
+- **ORM (Object-Relational Mapping)**: Prisma
+- **Database**: PostgreSQL
 
-- Auth0 for user authentication, Google login, and email login.
+#### Authentication:
+- **Authentication Provider**: Auth0
+- **Login Options**: Google login, email login
 
-### Analytics:
+#### Analytics:
+- **Data Visualization**: Chart.js
 
-- Chart.js for data visualization.
+#### Progressive Web App (PWA):
+- **Service Workers and PWA Features**: Implemented for enhanced performance and offline capabilities.
 
-### Progressive Web App (PWA):
+## Usage
 
-- Service workers and other PWA features are implemented.
+To use the Injury Tracking System, follow these steps:
 
-## Setup Instructions
+1. **Clone the Repository**: Clone this repository to your local machine using `git clone`.
 
-1. Clone the repository: `git clone https://github.com/deeksharungta/injury-tracking-system.git`
-2. Navigate to the project directory: `cd injury-tracking-system`
-3. Install dependencies: `npm install`
-4. Set up environment variables.
-   - DATABASE_URL
-   - AUTH0_SECRET
-   - AUTH0_BASE_URL
-   - AUTH0_ISSUER_BASE_URL
-   - AUTH0_CLIENT_ID
-   - AUTH0_CLIENT_SECRET
-5. Run the application: `npm run dev`
+2. **Set Up the Application**: Follow the provided setup instructions to configure the application and database.
 
-## Deployment
+3. **Register and Log In**: Create an account or use existing credentials to log in to the application.
 
-The application is deployed on [Vercel](https://injury-tracking-system-two.vercel.app/).
+4. **Report and Manage Injuries**: Create, view, update, and delete injury reports, pinpoint injuries on the body map, and provide injury details.
 
-## Code Structure
+5. **Explore the List of Reports**: Access the comprehensive list of injury reports, sort, search, and filter as needed.
 
-The codebase is organized as follows:
+6. **Log Out**: Log out of your account when done, ensuring the security and privacy of your data.
 
-- **/components:** React components used throughout the application.
 
-  - BarGraph.tsx
-  - Form.tsx
-  - Header.tsx
-  - InjuriesReported.tsx
-  - Layout.tsx
-  - PieChart.tsx
-  - SideBar.tsx
-  - Table.tsx
-  - Modal.tsx
+---
 
-- **/pages:** Next.js pages for different routes.
-
-  - **/api:** Backend APIs
-  - **/dashboard:**
-    - index.tsx
-  - **/reports:**
-    - index.tsx
-    - [id].tsx
-    - create.tsx
-    - update/[id].tsx
-
-- **/prisma:** Schema model and migrations files.
-
-- **/public:** Public assets.
-
-- **/styles:** Stylesheets for styling components.
-
-- **.env:** Environment configuration file
